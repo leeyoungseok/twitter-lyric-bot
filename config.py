@@ -2,10 +2,10 @@ import os
 
 TWITTER_CONSUMER_KEY = os.environ.get("API_KEY") or ""
 TWITTER_CONSUMER_SECRET = os.environ.get("API_KEY_SECRET") or ""
-TWITTER_ACCESS_TOKEN_KEY = os.environ.get("TWITTER_ACCESS_TOKEN_KEY") or ""
-TWITTER_ACCESS_TOKEN_SECRET = os.environ.get("TWITTER_ACCESS_TOKEN_SECRET") or ""
+TWITTER_ACCESS_TOKEN_KEY = os.environ.get("ACCESS_TOKEN_KEY") or ""
+TWITTER_ACCESS_TOKEN_SECRET = os.environ.get("ACCESS_TOKEN_SECRET") or ""
 
-GITHUB_ACCESS_KEY = os.environ.get("GITHUB_ACCESS_KEY") or ""
+GITHUB_ACCESS_KEY = os.environ.get("ACCESS_KEY") or ""
 GITHUB_REPO_URL = "ryanking13/twitter-lyric-bot"
 GITHUB_ISSUE_ID = 1
 TWEET_LENGTH_LIMIT = 140
