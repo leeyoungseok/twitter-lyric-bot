@@ -6,8 +6,8 @@ TWITTER_ACCESS_TOKEN_KEY = os.environ.get("ACCESS_TOKEN_KEY") or ""
 TWITTER_ACCESS_TOKEN_SECRET = os.environ.get("ACCESS_TOKEN_SECRET") or ""
 
 GITHUB_ACCESS_KEY = os.environ.get("ACCESS_KEY") or ""
-GITHUB_REPO_URL = "ryanking13/twitter-lyric-bot"
+GITHUB_REPO_URL = "leeyoungseok/twitter-lyric-bot"
 GITHUB_ISSUE_ID = 1
 TWEET_LENGTH_LIMIT = 140
 
-DEBUG = bool(os.environ.get("LYRIC_BOT_DEBUG") or "")
+DEBUG = bool(os.environ.get("LYRIC_BOT_DEBUG") or "TRUE")
