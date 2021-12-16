@@ -5,6 +5,9 @@ import tweet
 import validation
 import issue
 import config
+import speech_recognition as sr
+from gtts import gTTS
+import playsound
 
 # check is song is already posted before
 def duplicated(track_id):
@@ -97,9 +100,16 @@ def format_tweet(title, artist, verse):
     tweet += verse
     tweet += "\n\n"
     tweet += artist + " - " + title
+    with open('output.txt', 'w') as f:
+        f.write(tweet)
 
     return tweet
 
+def play_audio(text):
+    tts = gTTS(text=text, lang='ko', slow=True)
+    filename='voice.mp3'
+    tts.save(filename)
+    #playsound.playsound(filename)
 
 def main():
     title, artist, verse = get_random_verse(
@@ -109,6 +119,7 @@ def main():
 
     if config.DEBUG:
         print(body)
+        play_audio(body)
     else:
         tweet.post(body)
 
